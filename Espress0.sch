@@ -4799,6 +4799,80 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 </deviceset>
 </devicesets>
 </library>
+<library name="adafruit" urn="urn:adsk.eagle:library:420">
+<packages>
+<package name="1X01" library_version="1">
+<description>&lt;b&gt;PIN HEADER&lt;/b&gt;</description>
+<wire x1="-0.635" y1="1.27" x2="0.635" y2="1.27" width="0.1524" layer="21"/>
+<wire x1="0.635" y1="1.27" x2="1.27" y2="0.635" width="0.1524" layer="21"/>
+<wire x1="1.27" y1="0.635" x2="1.27" y2="-0.635" width="0.1524" layer="21"/>
+<wire x1="1.27" y1="-0.635" x2="0.635" y2="-1.27" width="0.1524" layer="21"/>
+<wire x1="-1.27" y1="0.635" x2="-1.27" y2="-0.635" width="0.1524" layer="21"/>
+<wire x1="-0.635" y1="1.27" x2="-1.27" y2="0.635" width="0.1524" layer="21"/>
+<wire x1="-1.27" y1="-0.635" x2="-0.635" y2="-1.27" width="0.1524" layer="21"/>
+<wire x1="0.635" y1="-1.27" x2="-0.635" y2="-1.27" width="0.1524" layer="21"/>
+<pad name="1" x="0" y="0" drill="1.016" diameter="1.9304" shape="octagon"/>
+<text x="-1.3462" y="1.8288" size="1.27" layer="25" ratio="10">&gt;NAME</text>
+<text x="-1.27" y="-3.175" size="1.27" layer="27">&gt;VALUE</text>
+<rectangle x1="-0.254" y1="-0.254" x2="0.254" y2="0.254" layer="51"/>
+</package>
+<package name="1X01-CLEANBIG" library_version="1">
+<pad name="1" x="0" y="0" drill="1.016" diameter="1.778"/>
+<text x="-1.3462" y="1.8288" size="1.27" layer="25" ratio="10">&gt;NAME</text>
+<text x="-1.27" y="-3.175" size="1.27" layer="27">&gt;VALUE</text>
+</package>
+<package name="1X1-BIGPOGO" library_version="1">
+<pad name="P$1" x="0" y="0" drill="1.4" diameter="2.54" shape="long"/>
+</package>
+</packages>
+<symbols>
+<symbol name="PINHD1" library_version="1">
+<wire x1="-6.35" y1="-2.54" x2="1.27" y2="-2.54" width="0.4064" layer="94"/>
+<wire x1="1.27" y1="-2.54" x2="1.27" y2="2.54" width="0.4064" layer="94"/>
+<wire x1="1.27" y1="2.54" x2="-6.35" y2="2.54" width="0.4064" layer="94"/>
+<wire x1="-6.35" y1="2.54" x2="-6.35" y2="-2.54" width="0.4064" layer="94"/>
+<text x="-6.35" y="3.175" size="1.778" layer="95">&gt;NAME</text>
+<text x="-6.35" y="-5.08" size="1.778" layer="96">&gt;VALUE</text>
+<pin name="1" x="-2.54" y="0" visible="pad" length="short" direction="pas" function="dot"/>
+</symbol>
+</symbols>
+<devicesets>
+<deviceset name="PINHD-1X1" prefix="JP" uservalue="yes" library_version="1">
+<description>&lt;b&gt;Pin header 1x1 for 0.1" spacing&lt;/b&gt;
+&lt;p&gt;
+With round pins</description>
+<gates>
+<gate name="G$1" symbol="PINHD1" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="1X01">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+<device name="CB" package="1X01-CLEANBIG">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+<device name="-BIGPOGO" package="1X1-BIGPOGO">
+<connects>
+<connect gate="G$1" pin="1" pad="P$1"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+</devicesets>
+</library>
 </libraries>
 <attributes>
 </attributes>
@@ -4828,8 +4902,6 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <part name="U$8" library="microbuilder" deviceset="MOUNTINGHOLE" device="2.0"/>
 <part name="U$9" library="microbuilder" deviceset="MOUNTINGHOLE" device="2.0"/>
 <part name="GND2" library="supply1" deviceset="GND" device=""/>
-<part name="U$10" library="microbuilder" deviceset="VBAT" device=""/>
-<part name="U$11" library="microbuilder" deviceset="VBUS" device=""/>
 <part name="CN1" library="microbuilder" deviceset="USB" device="_MICRO_20329_V2" value="4U#20329"/>
 <part name="U$2" library="microbuilder" deviceset="VBUS" device=""/>
 <part name="GND14" library="supply1" deviceset="GND" device=""/>
@@ -4843,8 +4915,6 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <part name="SWC" library="testpad" deviceset="TP" device="B1,27" value="TPB1,27"/>
 <part name="SWD" library="testpad" deviceset="TP" device="B1,27" value="TPB1,27"/>
 <part name="JP3" library="microbuilder" deviceset="HEADER-1X5" device="76MIL"/>
-<part name="JP4" library="microbuilder" deviceset="HEADER-1X5" device="76MIL"/>
-<part name="U$15" library="microbuilder" deviceset="3.3V" device=""/>
 <part name="U$16" library="microbuilder" deviceset="3.3V" device=""/>
 <part name="STATUS" library="microbuilder" deviceset="LED" device="0603_NOOUTLINE" value="red"/>
 <part name="R1" library="microbuilder" deviceset="RESISTOR" device="_0603_NOOUT" value="1.5K"/>
@@ -4862,8 +4932,6 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <part name="U$5" library="microbuilder" deviceset="3.3V" device=""/>
 <part name="U$6" library="microbuilder" deviceset="3.3V" device=""/>
 <part name="JP1" library="microbuilder" deviceset="HEADER-1X5" device="76MIL"/>
-<part name="GND9" library="supply1" deviceset="GND" device=""/>
-<part name="U$7" library="microbuilder" deviceset="3.3V" device=""/>
 <part name="PA22" library="testpad" deviceset="TP" device="B1,27" value="TPB1,27"/>
 <part name="PA23" library="testpad" deviceset="TP" device="B1,27" value="TPB1,27"/>
 <part name="BAT" library="microbuilder" deviceset="CON_JST_PH_2PIN" device="" value="JST-2PH"/>
@@ -4886,6 +4954,10 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <part name="PA18" library="testpad" deviceset="TP" device="B1,27" value="TPB1,27"/>
 <part name="PA28" library="testpad" deviceset="TP" device="B1,27" value="TPB1,27"/>
 <part name="PA27" library="testpad" deviceset="TP" device="B1,27" value="TPB1,27"/>
+<part name="JTAG" library="microbuilder" deviceset="HEADER-1X2" device="ROUND"/>
+<part name="VBUS" library="microbuilder" deviceset="VBUS" device=""/>
+<part name="U$20" library="microbuilder" deviceset="VBAT" device=""/>
+<part name="JP4" library="adafruit" library_urn="urn:adsk.eagle:library:420" deviceset="PINHD-1X1" device="CB"/>
 </parts>
 <sheets>
 <sheet>
@@ -4921,8 +4993,6 @@ Use 10K</text>
 <instance part="U$8" gate="G$1" x="233.68" y="10.16"/>
 <instance part="U$9" gate="G$1" x="228.6" y="10.16"/>
 <instance part="GND2" gate="1" x="177.8" y="121.92"/>
-<instance part="U$10" gate="G$1" x="177.8" y="129.54"/>
-<instance part="U$11" gate="G$1" x="259.08" y="129.54"/>
 <instance part="CN1" gate="G$1" x="203.2" y="187.96"/>
 <instance part="U$2" gate="G$1" x="220.98" y="195.58"/>
 <instance part="GND14" gate="1" x="15.24" y="175.26"/>
@@ -4936,8 +5006,6 @@ Use 10K</text>
 <instance part="SWC" gate="G$1" x="134.62" y="101.6" rot="MR180"/>
 <instance part="SWD" gate="G$1" x="129.54" y="96.52" rot="MR180"/>
 <instance part="JP3" gate="A" x="213.36" y="121.92"/>
-<instance part="JP4" gate="A" x="223.52" y="121.92" rot="R180"/>
-<instance part="U$15" gate="G$1" x="259.08" y="119.38"/>
 <instance part="U$16" gate="G$1" x="66.04" y="86.36"/>
 <instance part="STATUS" gate="G$1" x="165.1" y="149.86" rot="R270"/>
 <instance part="R1" gate="G$1" x="149.86" y="154.94" rot="R180"/>
@@ -4958,14 +5026,12 @@ Use 10K</text>
 <instance part="U$5" gate="G$1" x="254" y="96.774"/>
 <instance part="U$6" gate="G$1" x="200.66" y="71.374" rot="R90"/>
 <instance part="JP1" gate="A" x="213.36" y="149.86"/>
-<instance part="GND9" gate="1" x="185.42" y="142.24"/>
-<instance part="U$7" gate="G$1" x="185.42" y="152.4"/>
 <instance part="PA22" gate="G$1" x="162.56" y="116.84" rot="MR180"/>
 <instance part="PA23" gate="G$1" x="154.686" y="108.712" rot="MR180"/>
 <instance part="BAT" gate="G$1" x="241.3" y="190.5" rot="R180"/>
 <instance part="U$12" gate="G$1" x="259.08" y="193.04"/>
 <instance part="GND16" gate="1" x="259.08" y="185.42" rot="MR0"/>
-<instance part="JP2" gate="G$1" x="223.012" y="154.686" rot="R180"/>
+<instance part="JP2" gate="G$1" x="223.012" y="162.306" rot="R180"/>
 <instance part="PA15" gate="G$1" x="147.32" y="137.16" rot="MR180"/>
 <instance part="PA14" gate="G$1" x="154.94" y="137.16" rot="MR180"/>
 <instance part="U3" gate="G$1" x="147.32" y="58.42"/>
@@ -4982,6 +5048,10 @@ Use 10K</text>
 <instance part="PA18" gate="G$1" x="149.86" y="127" rot="MR180"/>
 <instance part="PA28" gate="G$1" x="139.7" y="91.44" rot="MR180"/>
 <instance part="PA27" gate="G$1" x="147.32" y="104.14" rot="MR180"/>
+<instance part="JTAG" gate="G$1" x="223.012" y="147.066" rot="R180"/>
+<instance part="VBUS" gate="G$1" x="182.88" y="116.84" rot="R90"/>
+<instance part="U$20" gate="G$1" x="185.42" y="119.38" rot="R90"/>
+<instance part="JP4" gate="G$1" x="241.3" y="129.54"/>
 </instances>
 <busses>
 </busses>
@@ -5063,11 +5133,6 @@ Use 10K</text>
 <wire x1="254" y1="66.04" x2="254" y2="71.12" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="GND9" gate="1" pin="GND"/>
-<pinref part="JP1" gate="A" pin="5"/>
-<wire x1="185.42" y1="144.78" x2="210.82" y2="144.78" width="0.1524" layer="91"/>
-</segment>
-<segment>
 <pinref part="BAT" gate="G$1" pin="1"/>
 <pinref part="GND16" gate="1" pin="GND"/>
 <wire x1="259.08" y1="187.96" x2="243.84" y2="187.96" width="0.1524" layer="91"/>
@@ -5119,11 +5184,6 @@ Use 10K</text>
 <pinref part="D2" gate="G$1" pin="A"/>
 </segment>
 <segment>
-<pinref part="U$11" gate="G$1" pin="VBUS"/>
-<pinref part="JP4" gate="A" pin="5"/>
-<wire x1="226.06" y1="127" x2="259.08" y2="127" width="0.1524" layer="91"/>
-</segment>
-<segment>
 <pinref part="CN1" gate="G$1" pin="VBUS"/>
 <pinref part="U$2" gate="G$1" pin="VBUS"/>
 <wire x1="220.98" y1="193.04" x2="213.36" y2="193.04" width="0.1524" layer="91"/>
@@ -5139,6 +5199,11 @@ Use 10K</text>
 <junction x="119.38" y="68.58"/>
 <pinref part="U$38" gate="G$1" pin="VBUS"/>
 </segment>
+<segment>
+<pinref part="JP3" gate="A" pin="5"/>
+<wire x1="210.82" y1="116.84" x2="185.42" y2="116.84" width="0.1524" layer="91"/>
+<pinref part="VBUS" gate="G$1" pin="VBUS"/>
+</segment>
 </net>
 <net name="N$6" class="0">
 <segment>
@@ -5151,11 +5216,6 @@ Use 10K</text>
 <pinref part="U$4" gate="G$1" pin="VBAT"/>
 <pinref part="D3" gate="G$1" pin="A"/>
 <wire x1="17.78" y1="83.82" x2="17.78" y2="73.66" width="0.1524" layer="91"/>
-</segment>
-<segment>
-<pinref part="U$10" gate="G$1" pin="VBAT"/>
-<pinref part="JP3" gate="A" pin="1"/>
-<wire x1="210.82" y1="127" x2="177.8" y2="127" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="U$12" gate="G$1" pin="VBAT"/>
@@ -5171,6 +5231,11 @@ Use 10K</text>
 <junction x="175.26" y="60.96"/>
 <pinref part="U$39" gate="G$1" pin="VBAT"/>
 <wire x1="170.18" y1="73.66" x2="170.18" y2="60.96" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="JP3" gate="A" pin="4"/>
+<wire x1="210.82" y1="119.38" x2="187.96" y2="119.38" width="0.1524" layer="91"/>
+<pinref part="U$20" gate="G$1" pin="VBAT"/>
 </segment>
 </net>
 <net name="VOUT" class="0">
@@ -5206,9 +5271,8 @@ Use 10K</text>
 <label x="30.48" y="182.88" size="1.778" layer="95"/>
 </segment>
 <segment>
-<wire x1="210.82" y1="116.84" x2="185.42" y2="116.84" width="0.1524" layer="91"/>
-<label x="185.42" y="116.84" size="1.778" layer="95"/>
-<pinref part="JP3" gate="A" pin="5"/>
+<pinref part="JP3" gate="A" pin="1"/>
+<wire x1="210.82" y1="127" x2="182.88" y2="127" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="3.3V" class="0">
@@ -5226,11 +5290,6 @@ Use 10K</text>
 <pinref part="DOTSTAR" gate="G$1" pin="VDD"/>
 <pinref part="U$19" gate="G$1" pin="3.3V"/>
 <wire x1="165.1" y1="200.66" x2="165.1" y2="203.2" width="0.1524" layer="91"/>
-</segment>
-<segment>
-<wire x1="259.08" y1="116.84" x2="226.06" y2="116.84" width="0.1524" layer="91"/>
-<pinref part="JP4" gate="A" pin="1"/>
-<pinref part="U$15" gate="G$1" pin="3.3V"/>
 </segment>
 <segment>
 <wire x1="66.04" y1="83.82" x2="66.04" y2="63.5" width="0.1524" layer="91"/>
@@ -5273,25 +5332,8 @@ Use 10K</text>
 <junction x="203.2" y="71.374"/>
 </segment>
 <segment>
-<pinref part="JP1" gate="A" pin="4"/>
-<pinref part="U$7" gate="G$1" pin="3.3V"/>
-<wire x1="210.82" y1="147.32" x2="185.42" y2="147.32" width="0.1524" layer="91"/>
-<wire x1="185.42" y1="147.32" x2="185.42" y2="149.86" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="N$3" class="0">
-<segment>
-<pinref part="ATSAMD21E" gate="G$1" pin="PA30/I10/SECOM1.2/SWCLK"/>
-<pinref part="SWC" gate="G$1" pin="TP"/>
-<wire x1="114.3" y1="104.14" x2="134.62" y2="104.14" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="N$4" class="0">
-<segment>
-<pinref part="ATSAMD21E" gate="G$1" pin="PA31/I11/SECOM1.3/SWDIO"/>
-<wire x1="114.3" y1="101.6" x2="129.54" y2="101.6" width="0.1524" layer="91"/>
-<wire x1="129.54" y1="101.6" x2="129.54" y2="99.06" width="0.1524" layer="91"/>
-<pinref part="SWD" gate="G$1" pin="TP"/>
+<pinref part="JP3" gate="A" pin="3"/>
+<wire x1="210.82" y1="121.92" x2="185.42" y2="121.92" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="D1_A0_PA02" class="0">
@@ -5301,9 +5343,9 @@ Use 10K</text>
 <label x="116.84" y="177.8" size="1.778" layer="95"/>
 </segment>
 <segment>
-<wire x1="243.84" y1="121.92" x2="226.06" y2="121.92" width="0.1524" layer="91"/>
-<label x="233.68" y="121.92" size="1.778" layer="95"/>
-<pinref part="JP4" gate="A" pin="3"/>
+<pinref part="JP4" gate="G$1" pin="1"/>
+<wire x1="238.76" y1="129.54" x2="223.52" y2="129.54" width="0.1524" layer="91"/>
+<label x="218.44" y="129.54" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="N$1" class="0">
@@ -5342,14 +5384,9 @@ Use 10K</text>
 <label x="116.84" y="160.02" size="1.778" layer="95"/>
 </segment>
 <segment>
-<wire x1="226.06" y1="124.46" x2="243.84" y2="124.46" width="0.1524" layer="91"/>
-<label x="233.68" y="124.46" size="1.778" layer="95"/>
-<pinref part="JP4" gate="A" pin="4"/>
-</segment>
-<segment>
 <pinref part="JP2" gate="G$1" pin="1"/>
-<wire x1="225.552" y1="152.146" x2="242.316" y2="152.146" width="0.1524" layer="91"/>
-<label x="233.172" y="152.146" size="1.778" layer="95"/>
+<wire x1="225.552" y1="159.766" x2="242.316" y2="159.766" width="0.1524" layer="91"/>
+<label x="233.172" y="159.766" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="N$8" class="0">
@@ -5366,9 +5403,9 @@ Use 10K</text>
 <label x="116.84" y="167.64" size="1.778" layer="95"/>
 </segment>
 <segment>
-<wire x1="210.82" y1="121.92" x2="187.96" y2="121.92" width="0.1524" layer="91"/>
-<label x="185.42" y="121.92" size="1.778" layer="95"/>
-<pinref part="JP3" gate="A" pin="3"/>
+<pinref part="JP1" gate="A" pin="4"/>
+<wire x1="210.82" y1="147.32" x2="193.04" y2="147.32" width="0.1524" layer="91"/>
+<label x="180.34" y="147.32" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="D3_A3_PA07_RXD_SCK" class="0">
@@ -5378,9 +5415,9 @@ Use 10K</text>
 <label x="116.84" y="165.1" size="1.778" layer="95"/>
 </segment>
 <segment>
-<wire x1="210.82" y1="119.38" x2="185.42" y2="119.38" width="0.1524" layer="91"/>
-<label x="185.42" y="119.38" size="1.778" layer="95"/>
-<pinref part="JP3" gate="A" pin="4"/>
+<pinref part="JP1" gate="A" pin="5"/>
+<wire x1="210.82" y1="144.78" x2="193.04" y2="144.78" width="0.1524" layer="91"/>
+<label x="180.34" y="144.78" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="D2_A1_PA09_SCL_MISO" class="0">
@@ -5390,14 +5427,9 @@ Use 10K</text>
 <label x="116.84" y="157.48" size="1.778" layer="95"/>
 </segment>
 <segment>
-<wire x1="243.84" y1="119.38" x2="226.06" y2="119.38" width="0.1524" layer="91"/>
-<label x="233.68" y="119.38" size="1.778" layer="95"/>
-<pinref part="JP4" gate="A" pin="2"/>
-</segment>
-<segment>
 <pinref part="JP2" gate="G$1" pin="2"/>
-<wire x1="225.552" y1="154.686" x2="242.57" y2="154.94" width="0.1524" layer="91"/>
-<label x="233.426" y="154.94" size="1.778" layer="95"/>
+<wire x1="225.552" y1="162.306" x2="242.57" y2="162.56" width="0.1524" layer="91"/>
+<label x="233.426" y="162.56" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="PA16D_FLASHMOSI" class="0">
@@ -5561,6 +5593,35 @@ Use 10K</text>
 <pinref part="PA27" gate="G$1" pin="TP"/>
 </segment>
 </net>
+<net name="SWC" class="0">
+<segment>
+<pinref part="JTAG" gate="G$1" pin="2"/>
+<wire x1="225.552" y1="147.066" x2="225.552" y2="147.32" width="0.1524" layer="91"/>
+<wire x1="225.552" y1="147.32" x2="243.84" y2="147.32" width="0.1524" layer="91"/>
+<label x="233.68" y="147.32" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="ATSAMD21E" gate="G$1" pin="PA30/I10/SECOM1.2/SWCLK"/>
+<pinref part="SWC" gate="G$1" pin="TP"/>
+<wire x1="114.3" y1="104.14" x2="134.62" y2="104.14" width="0.1524" layer="91"/>
+<label x="127" y="104.14" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="SWD" class="0">
+<segment>
+<pinref part="JTAG" gate="G$1" pin="1"/>
+<wire x1="225.552" y1="144.526" x2="243.84" y2="144.526" width="0.1524" layer="91"/>
+<wire x1="243.84" y1="144.526" x2="243.84" y2="144.78" width="0.1524" layer="91"/>
+<label x="233.68" y="144.78" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="ATSAMD21E" gate="G$1" pin="PA31/I11/SECOM1.3/SWDIO"/>
+<wire x1="114.3" y1="101.6" x2="129.54" y2="101.6" width="0.1524" layer="91"/>
+<wire x1="129.54" y1="101.6" x2="129.54" y2="99.06" width="0.1524" layer="91"/>
+<pinref part="SWD" gate="G$1" pin="TP"/>
+<label x="121.92" y="101.6" size="1.778" layer="95"/>
+</segment>
+</net>
 </nets>
 </sheet>
 </sheets>
@@ -5573,6 +5634,11 @@ Use 10K</text>
 <note version="6.3" minversion="6.2.2" severity="warning">
 Since Version 6.2.2 text objects can contain more than one line,
 which will not be processed correctly with this version.
+</note>
+<note version="8.2" severity="warning">
+Since Version 8.2, EAGLE supports online libraries. The ids
+of those online libraries will not be understood (or retained)
+with this version.
 </note>
 </compatibility>
 </eagle>
