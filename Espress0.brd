@@ -102,7 +102,7 @@
 <layer number="119" name="KAP_TEKEN" color="7" fill="1" visible="no" active="yes"/>
 <layer number="120" name="KAP_MAAT1" color="7" fill="1" visible="no" active="yes"/>
 <layer number="121" name="_tsilk" color="7" fill="1" visible="no" active="yes"/>
-<layer number="122" name="_bsilk" color="7" fill="1" visible="no" active="yes"/>
+<layer number="122" name="_bsilk" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="123" name="tTestmark" color="7" fill="1" visible="no" active="yes"/>
 <layer number="124" name="bTestmark" color="7" fill="1" visible="no" active="yes"/>
 <layer number="125" name="_tNames" color="7" fill="1" visible="no" active="yes"/>
@@ -174,8 +174,8 @@
 <plain>
 <text x="6.985" y="26.543" size="0.6096" layer="122" font="vector" rot="MR0">D3</text>
 <text x="8.89" y="27.178" size="0.6096" layer="25" font="fixed" rot="MR180">D4</text>
-<text x="35.705771875" y="5.551946875" size="0.4064" layer="122" font="vector" rot="MR90" align="top-left">Based on Trinket m0 by Adafruit Industries.</text>
-<text x="36.04176875" y="10.10458125" size="0.6096" layer="26" font="fixed" rot="MR270">8-2018-0.5</text>
+<text x="35.705771875" y="5.551946875" size="0.4064" layer="26" font="vector" rot="MR90" align="top-left">Based on Trinket m0 by Adafruit Industries.</text>
+<text x="1.58265" y="9.948228125" size="0.6096" layer="26" font="fixed" rot="MR270">8-2018-0.5</text>
 <text x="31.774684375" y="29.65171875" size="0.4064" layer="26" font="fixed" rot="MR180" align="top-right">github.com/eighthree/espress0</text>
 <text x="20.574334375" y="8.974265625" size="0.6096" layer="26" font="vector" ratio="15" rot="MR180.6" align="center">Designed for use 
 with CircuitPython</text>
